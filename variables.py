@@ -3,8 +3,6 @@ import datetime
 
 from dotenv import load_dotenv
 
-from db.connection import Connection
-
 
 # Мой ID пользователя
 BASE_VK_USER_ID = '240664024'
@@ -19,6 +17,9 @@ SERVER_ADDRESS_OPTIONS = ['api.vk.com', 'api.vk.ru']
 
 # Протестированная версия VK API
 TESTED_VK_API_VERSION = '5.199'
+
+# Время между выполнением запросов, чтобы не возникало ошибки слишком частых обращений
+API_SLEEP_TIME = 0.3
 
 # Получаем токен API из файла .env
 load_dotenv()
